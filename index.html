@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dataset Explorer</title>
+  <meta name="description" content="">
+  <meta name="author" content="JKuntze">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Slide 1</h2>
+  
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Slide 2</h2>
+  
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>Slide 3</h2>
+  
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>Slide 4</h2>
+  
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>Slide 5</h2>
+  
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h2>Instructions 1/2</h2>
+  <p>Your Reproducible Pitch Presentation</p>
+
+<p>OK, you&#39;ve made your shiny app, now it&#39;s time to make your pitch. You get 5 slides (inclusive of the title slide)  to pitch a your app. You&#39;re going to create a web page using Slidify or Rstudio Presenter with an html5 slide deck.</p>
+
+<p>Here&#39;s what you need</p>
+
+<ol>
+<li>5 slides to pitch our idea done in Slidify or Rstudio Presenter</li>
+<li>Your presentation pushed to github or Rpubs</li>
+<li>A link to your github or Rpubs presentation pasted into the text box below</li>
+</ol>
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h2>Instructions 2/2</h2>
+  <p>Your presentation must satisfy the following</p>
+
+<ol>
+<li>It must be done in Slidify or Rstudio Presenter</li>
+<li>It must be 5 pages</li>
+<li>It must be hosted on github or Rpubs</li>
+<li>It must contained some embedded R code that gets run when slidifying the document</li>
+</ol>
+
+<p>Notice to publish your slidify presentation to github or Rpubs, there&#39;s the publish command. This link outlines how to do it (it&#39;s one line). </p>
+
+<p>You can also publish using both formats to github manually using gh-pages, though your github branch must have a .nojekyll fle and be on a branch names gh-pages. There&#39;s more on gh-pages here <a href="https://pages.github.com/">https://pages.github.com/</a>  and there is a video lecture outlining how to do this.</p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
