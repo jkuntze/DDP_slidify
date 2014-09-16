@@ -13,6 +13,11 @@ knit        : slidify::knit2slides
 
 ## Slide 1
 
+```{r test, echo=TRUE}
+a <- 1+1
+a
+```
+
 ---
 
 ## Slide 2

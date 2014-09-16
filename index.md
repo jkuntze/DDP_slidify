@@ -13,6 +13,16 @@ knit        : slidify::knit2slides
 
 ## Slide 1
 
+
+```r
+a <- 1+1
+a
+```
+
+```
+## [1] 2
+```
+
 ---
 
 ## Slide 2

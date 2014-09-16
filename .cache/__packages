@@ -1,0 +1,12 @@
+base
+datasets
+DBI
+devtools
+graphics
+grDevices
+knitr
+methods
+RMySQL
+slidify
+stats
+utils
