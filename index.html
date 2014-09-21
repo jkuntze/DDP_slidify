@@ -19,60 +19,127 @@
   <div class="reveal">
     <div class="slides">
       <section class='' data-state='' id='slide-1'>
-  <h2>Slide 1</h2>
-  <pre><code class="r">a &lt;- 1+1
-a
-</code></pre>
+  <h1>Dataset Explorer</h1>
+  <h2>An example using the mtcars dataset</h2>
 
-<pre><code>## [1] 2
-</code></pre>
+<h3>JKuntze</h3>
 
 </section>
 <section class='' data-state='' id='slide-2'>
-  <h2>Slide 2</h2>
-  
+  <h2>What it is</h2>
+  <p>This application provides a framework that could be easily modified to explore any dataset. 
+Once it&#39;s modified by an user who knows the R language, the application becomes a tool for users who understand statistics but are not necessarily familiar with R. </p>
+
+<p>The mtcars dataset was used to develop the functionalities. </p>
+
 </section>
 <section class='' data-state='' id='slide-3'>
-  <h2>Slide 3</h2>
-  
+  <h2>What it does</h2>
+  <p>The application provides means to perform basic data exploration, via:</p>
+
+<ul>
+<li>Histogram</li>
+<li>Scatter plot</li>
+<li>Correlation</li>
+</ul>
+
+<p>Moreover, linear models can be fitted and evaluated, using confidence intervals and plotting residuals.</p>
+
+<p>The next slide shows some of the application outputs. The model suggested by Henderson and Velleman (see references) was chosen to produce this example.</p>
+
 </section>
 <section class='' data-state='' id='slide-4'>
-  <h2>Slide 4</h2>
-  
+  <h2>Linear regression outputs</h2>
+  <pre><code class="r">model&lt;-lm(gp100m~wt+hppwt,data=dataset)
+kable(summary(model)$coefficients, format=&quot;html&quot;)
+</code></pre>
+
+<table>
+ <thead>
+  <tr>
+   <th align="left">   </th>
+   <th align="right"> Estimate </th>
+   <th align="right"> Std. Error </th>
+   <th align="right"> t value </th>
+   <th align="right"> Pr(>|t|) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td align="left"> (Intercept) </td>
+   <td align="right"> -0.4015 </td>
+   <td align="right"> 0.5120 </td>
+   <td align="right"> -0.7842 </td>
+   <td align="right"> 0.4393 </td>
+  </tr>
+  <tr>
+   <td align="left"> wt </td>
+   <td align="right"> 1.4722 </td>
+   <td align="right"> 0.1216 </td>
+   <td align="right"> 12.1113 </td>
+   <td align="right"> 0.0000 </td>
+  </tr>
+  <tr>
+   <td align="left"> hppwt </td>
+   <td align="right"> 0.0240 </td>
+   <td align="right"> 0.0073 </td>
+   <td align="right"> 3.2863 </td>
+   <td align="right"> 0.0027 </td>
+  </tr>
+</tbody>
+</table>
+
+<pre><code class="r">summary(model)$adj.r.squared
+</code></pre>
+
+<p>[1] 0.8379</p>
+
+<pre><code class="r">kable(confint(model), format=&quot;html&quot;)
+</code></pre>
+
+<table>
+ <thead>
+  <tr>
+   <th align="left">   </th>
+   <th align="right"> 2.5 % </th>
+   <th align="right"> 97.5 % </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td align="left"> (Intercept) </td>
+   <td align="right"> -1.4488 </td>
+   <td align="right"> 0.6457 </td>
+  </tr>
+  <tr>
+   <td align="left"> wt </td>
+   <td align="right"> 1.2236 </td>
+   <td align="right"> 1.7208 </td>
+  </tr>
+  <tr>
+   <td align="left"> hppwt </td>
+   <td align="right"> 0.0091 </td>
+   <td align="right"> 0.0389 </td>
+  </tr>
+</tbody>
+</table>
+
 </section>
 <section class='' data-state='' id='slide-5'>
-  <h2>Slide 5</h2>
-  
-</section>
-<section class='' data-state='' id='slide-6'>
-  <h2>Instructions 1/2</h2>
-  <p>Your Reproducible Pitch Presentation</p>
+  <h2>To know more about it</h2>
+  <p>The application can be found at 
+<a href="https://jkuntze.shinyapps.io/DDP_shinyapp/">https://jkuntze.shinyapps.io/DDP_shinyapp/</a></p>
 
-<p>OK, you&#39;ve made your shiny app, now it&#39;s time to make your pitch. You get 5 slides (inclusive of the title slide)  to pitch a your app. You&#39;re going to create a web page using Slidify or Rstudio Presenter with an html5 slide deck.</p>
+<p>The source code is available at
+<a href="https://github.com/jkuntze/DDP_shinyapp">https://github.com/jkuntze/DDP_shinyapp</a></p>
 
-<p>Here&#39;s what you need</p>
+<h3>References</h3>
 
-<ol>
-<li>5 slides to pitch our idea done in Slidify or Rstudio Presenter</li>
-<li>Your presentation pushed to github or Rpubs</li>
-<li>A link to your github or Rpubs presentation pasted into the text box below</li>
-</ol>
-
-</section>
-<section class='' data-state='' id='slide-7'>
-  <h2>Instructions 2/2</h2>
-  <p>Your presentation must satisfy the following</p>
-
-<ol>
-<li>It must be done in Slidify or Rstudio Presenter</li>
-<li>It must be 5 pages</li>
-<li>It must be hosted on github or Rpubs</li>
-<li>It must contained some embedded R code that gets run when slidifying the document</li>
-</ol>
-
-<p>Notice to publish your slidify presentation to github or Rpubs, there&#39;s the publish command. This link outlines how to do it (it&#39;s one line). </p>
-
-<p>You can also publish using both formats to github manually using gh-pages, though your github branch must have a .nojekyll fle and be on a branch names gh-pages. There&#39;s more on gh-pages here <a href="https://pages.github.com/">https://pages.github.com/</a>  and there is a video lecture outlining how to do this.</p>
+<ul>
+<li>Brian Caffo, PhD, Jeff Leek, PhD, Roger D. Peng, PhD, Developing Data Products - Coursera</li>
+<li>mtcars help file, R Documentation</li>
+<li>Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.</li>
+</ul>
 
 </section>
     </div>
