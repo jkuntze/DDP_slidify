@@ -6,3 +6,6 @@ This repository contains files related to the course Developing Data Products of
 
 The Slidify presentation can be viewed at
 - https://jkuntze.github.io/DDP_slidify
+
+The Shiny app can be viewed at:
+- https://jkuntze.shinyapps.io/DDP_shinyapp/
