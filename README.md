@@ -1,6 +1,6 @@
 ## Developing Data Products 
 
-This repository contains files related to the course Developing Data Products offered through Coursera. 
+This repository contains files related to the course Developing Data Products offered through Coursera (see the gh-pages branch). 
 
 ### Viewing the project
 
